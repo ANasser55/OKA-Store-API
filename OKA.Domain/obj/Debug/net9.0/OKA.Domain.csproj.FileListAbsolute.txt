@@ -1,0 +1,24 @@
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\bin\Debug\net9.0\OKA.Domain.deps.json
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\bin\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\bin\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\refint\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Domain\obj\Debug\net9.0\ref\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\bin\Debug\net9.0\OKA.Domain.deps.json
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\bin\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\bin\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\refint\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\ref\OKA.Domain.dll

@@ -1,0 +1,12 @@
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\bin\Debug\net9.0\OKA.Infrastructure.deps.json
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\bin\Debug\net9.0\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\bin\Debug\net9.0\OKA.Infrastructure.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\refint\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\ref\OKA.Infrastructure.dll

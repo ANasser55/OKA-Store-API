@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "OKA.API.Controllers.ProductsController",
+    "Method": "Products",
+    "RelativePath": "api/Products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,30 @@
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\bin\Debug\net9.0\OKA.Application.deps.json
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\bin\Debug\net9.0\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\bin\Debug\net9.0\OKA.Application.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\refint\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Application.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\ref\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\bin\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\bin\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKA Store\OKA.Application\obj\Debug\net9.0\OKA.Appl.88EF4B3C.Up2Date
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\bin\Debug\net9.0\OKA.Application.deps.json
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\bin\Debug\net9.0\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\bin\Debug\net9.0\OKA.Application.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\bin\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\bin\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Appl.88EF4B3C.Up2Date
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\refint\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\ref\OKA.Application.dll
