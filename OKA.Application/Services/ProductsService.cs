@@ -1,4 +1,6 @@
-﻿using OKA.Domain.Entities;
+﻿using OKA.Application.DTOs;
+using OKA.Application.IService;
+using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
 using System;
 using System.Collections.Generic;
@@ -8,18 +10,21 @@ using System.Threading.Tasks;
 
 namespace OKA.Application.Services
 {
-    public class ProductsService
+    public class ProductsService : IProductsService
     {
         private readonly IProductsRepository _repository;
 
-        ProductsService(IProductsRepository repository)
+        public ProductsService(IProductsRepository repository)
         {
             this._repository = repository;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProducts()
+        public async Task<PageDTO<Product>> GetAllProducts(string? searchTerm, int page, int pageSize)
         {
-            return await _repository.GetAllProducts();
+            var products = await _repository.GetAllProducts(searchTerm, page, pageSize);
+            var totalPorductsCount = await _repository.GetTotalCount(searchTerm);
+
+            return new PageDTO<Product>(products, page, pageSize, totalPorductsCount);
         }
     }
 }

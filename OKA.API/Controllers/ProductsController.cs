@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using OKA.Application.Services;
+using OKA.Application.IService;
 
 namespace OKA.API.Controllers
 {
@@ -8,18 +8,19 @@ namespace OKA.API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ProductsService _service;
+        private readonly IProductsService _service;
 
-        ProductsController(ProductsService service)
+        public ProductsController(IProductsService service)
         {
             this._service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Products()
+        public async Task<IActionResult> Products(string? searchTerm, int page = 1, int pageSize = 10)
         {
-            await _service.GetAllProducts();
-            return Ok();
+            var products = await _service.GetAllProducts(searchTerm, page, pageSize);
+
+            return Ok(products);
         }
     }
 }

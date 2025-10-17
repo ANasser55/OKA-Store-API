@@ -20,8 +20,7 @@ public partial class OKAStoreDbContext : DbContext
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=OKAStore;Integrated Security=SSPI;TrustServerCertificate=True");
+    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

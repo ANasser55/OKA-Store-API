@@ -22,3 +22,4 @@ C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.d
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\refint\OKA.Domain.dll
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.pdb
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\ref\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Domain\obj\Debug\net9.0\OKA.Domain.sourcelink.json

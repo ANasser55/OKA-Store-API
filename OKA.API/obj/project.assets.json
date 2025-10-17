@@ -1048,6 +1048,21 @@
         "runtime": {
           "bin/placeholder/OKA.Domain.dll": {}
         }
+      },
+      "OKA.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10",
+          "OKA.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OKA.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OKA.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2839,6 +2854,11 @@
       "type": "project",
       "path": "../OKA.Domain/OKA.Domain.csproj",
       "msbuildProject": "../OKA.Domain/OKA.Domain.csproj"
+    },
+    "OKA.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../OKA.Infrastructure/OKA.Infrastructure.csproj",
+      "msbuildProject": "../OKA.Infrastructure/OKA.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2846,7 +2866,8 @@
       "Microsoft.AspNetCore.OpenApi >= 9.0.8",
       "Microsoft.EntityFrameworkCore >= 9.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.10",
-      "OKA.Application >= 1.0.0"
+      "OKA.Application >= 1.0.0",
+      "OKA.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2883,6 +2904,9 @@
           "projectReferences": {
             "C:\\Users\\A.Nasser\\source\\repos\\OKAStore\\OKA.Application\\OKA.Application.csproj": {
               "projectPath": "C:\\Users\\A.Nasser\\source\\repos\\OKAStore\\OKA.Application\\OKA.Application.csproj"
+            },
+            "C:\\Users\\A.Nasser\\source\\repos\\OKAStore\\OKA.Infrastructure\\OKA.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\A.Nasser\\source\\repos\\OKAStore\\OKA.Infrastructure\\OKA.Infrastructure.csproj"
             }
           }
         }
@@ -2935,7 +2959,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

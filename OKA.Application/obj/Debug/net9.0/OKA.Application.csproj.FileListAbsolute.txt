@@ -28,3 +28,4 @@ C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.App
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\refint\OKA.Application.dll
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.pdb
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\ref\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Application\obj\Debug\net9.0\OKA.Application.sourcelink.json

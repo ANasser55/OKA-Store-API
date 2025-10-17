@@ -11,7 +11,8 @@
           "Microsoft.AspNetCore.OpenApi": "9.0.8",
           "Microsoft.EntityFrameworkCore": "9.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10",
-          "OKA.Application": "1.0.0"
+          "OKA.Application": "1.0.0",
+          "OKA.Infrastructure": "1.0.0"
         },
         "runtime": {
           "OKA.API.dll": {}
@@ -632,6 +633,19 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "OKA.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10",
+          "OKA.Application": "1.0.0"
+        },
+        "runtime": {
+          "OKA.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1046,6 +1060,11 @@
       "sha512": ""
     },
     "OKA.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OKA.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

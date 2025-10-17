@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OKA.Application\OKA.Application.csproj" />
+    <ProjectReference Include="..\OKA.Infrastructure\OKA.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,3 +10,21 @@ C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA
 C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\refint\OKA.Infrastructure.dll
 C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.pdb
 C:\Users\A.Nasser\source\repos\OKA Store\OKA.Infrastructure\obj\Debug\net9.0\ref\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Infrastructure.deps.json
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Infrastructure.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Application.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Domain.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Application.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\bin\Debug\net9.0\OKA.Domain.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.sourcelink.json
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infr.52DFA8E8.Up2Date
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\refint\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\OKA.Infrastructure.pdb
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.Infrastructure\obj\Debug\net9.0\ref\OKA.Infrastructure.dll

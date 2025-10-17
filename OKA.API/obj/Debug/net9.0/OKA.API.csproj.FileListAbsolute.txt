@@ -172,3 +172,6 @@ C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\obj\Debug\net9.0\refint\OKA.API.
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\obj\Debug\net9.0\OKA.API.pdb
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\obj\Debug\net9.0\OKA.API.genruntimeconfig.cache
 C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\obj\Debug\net9.0\ref\OKA.API.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\obj\Debug\net9.0\OKA.API.sourcelink.json
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\bin\Debug\net9.0\OKA.Infrastructure.dll
+C:\Users\A.Nasser\source\repos\OKAStore\OKA.API\bin\Debug\net9.0\OKA.Infrastructure.pdb

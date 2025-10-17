@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OKA.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+640039ca79e161a7835245f6062b643d295cebb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("OKA.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OKA.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
