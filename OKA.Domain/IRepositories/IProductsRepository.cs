@@ -4,7 +4,8 @@ namespace OKA.Domain.IRepositories
 {
     public interface IProductsRepository
     {
-        Task<IEnumerable<Product>> GetAllProducts(string? searchTerm, int page, int pageSize);
+        Task<IEnumerable<Product>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize);
         Task<int> GetTotalCount(string? searchTerm);
+        Task<Product?> GetProductById(int id);
     }
 }

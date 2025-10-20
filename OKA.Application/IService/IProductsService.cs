@@ -5,6 +5,7 @@ namespace OKA.Application.IService
 {
     public interface IProductsService
     {
-        Task<PageDTO<Product>> GetAllProducts(string? searchTerm, int page, int pageSize);
+        Task<PageDTO<ProductsDTO>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize);
+        Task<ProductsDTO?> GetProductById(int id);
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace OKA.Application.DTOs
 {
     public class PageDTO<T>
@@ -13,7 +8,7 @@ namespace OKA.Application.DTOs
         public int ItemsCount { get; }
         public int Page { get; }
         public int PageSize { get; }
-        public int LastPage => (int)Math.Ceiling( ItemsCount / (decimal)PageSize);
+        public int LastPage => (int)Math.Ceiling(ItemsCount / (decimal)PageSize);
         public bool HasNextPage => Page < LastPage;
         public bool HasPreviousPage => Page > 1;
 

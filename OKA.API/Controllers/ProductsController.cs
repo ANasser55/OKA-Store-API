@@ -15,12 +15,19 @@ namespace OKA.API.Controllers
             this._service = service;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Products(string? searchTerm, int page = 1, int pageSize = 10)
+        [HttpGet()]
+        public async Task<IActionResult> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page = 1, int pageSize = 10)
         {
-            var products = await _service.GetAllProducts(searchTerm, page, pageSize);
+            var products = await _service.GetAllProducts(searchTerm, sortColumn, sortBy, page, pageSize);
 
             return Ok(products);
+        }
+
+        [HttpGet("details/{id}")]
+        public async Task<IActionResult> GetProductById(int id)
+        { 
+            var product = await _service.GetProductById(id);
+            return Ok(product);
         }
     }
 }

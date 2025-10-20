@@ -1,12 +1,8 @@
-﻿using OKA.Application.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
 using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
 using OKA.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace OKA.Infrastructure.Repositories
 {
@@ -19,21 +15,57 @@ namespace OKA.Infrastructure.Repositories
             this._context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProducts(string? searchTerm, int page, int pageSize)
+        public async Task<IEnumerable<Product>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize)
         {
-            if (searchTerm == null)
+            var query = _context.Products.Include(p => p.Category).AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm) && !string.IsNullOrWhiteSpace(searchTerm))
+                query = query.Where(p => p.Name.Contains(searchTerm));
+
+
+
+            query = query.Skip((page - 1) * pageSize).Take(pageSize);
+
+            if (sortBy?.ToLower() == "desc")
             {
-                return _context.Products.Skip((page - 1) * pageSize).Take(pageSize);
+                switch (sortColumn?.ToLower())
+                {
+                    case "price":
+                        query = query.OrderByDescending(p => p.Price);
+                        break;
+                    default:
+                        query = query.OrderByDescending(p => p.Name);
+                        break;
+                }
+            }
+            else
+            {
+                switch (sortColumn?.ToLower())
+                {
+                    case "price":
+                        query = query.OrderBy(p => p.Price);
+                        break;
+                    default:
+                        query = query.OrderBy(p => p.Name);
+                        break;
+                }
             }
 
-            return _context.Products.Where(p => p.Name.Contains(searchTerm)).Skip((page - 1) * pageSize).Take(pageSize);
+
+            return await query.ToListAsync();
 
         }
         public async Task<int> GetTotalCount(string? searchTerm)
         {
             if (searchTerm == null)
-                return _context.Products.Count();
-            return _context.Products.Where(p => p.Name.Contains(searchTerm)).Count();
+                return await _context.Products.CountAsync();
+            return await _context.Products.Where(p => p.Name.Contains(searchTerm)).CountAsync();
         }
+        public async Task<Product?> GetProductById(int id)
+        {
+            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+
     }
 }

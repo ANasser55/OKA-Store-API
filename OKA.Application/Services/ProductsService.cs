@@ -1,12 +1,7 @@
 ﻿using OKA.Application.DTOs;
 using OKA.Application.IService;
-using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace OKA.Application.Services
 {
@@ -19,12 +14,41 @@ namespace OKA.Application.Services
             this._repository = repository;
         }
 
-        public async Task<PageDTO<Product>> GetAllProducts(string? searchTerm, int page, int pageSize)
+        public async Task<PageDTO<ProductsDTO>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize)
         {
-            var products = await _repository.GetAllProducts(searchTerm, page, pageSize);
+            var products = await _repository.GetAllProducts(searchTerm, sortColumn, sortBy, page, pageSize);
             var totalPorductsCount = await _repository.GetTotalCount(searchTerm);
+            var productsDTO = products.Select(p => new ProductsDTO()
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Price = p.Price,
+                Description = p.Description,
+                Quantity = p.Quantity,
+                ImageUrl = p.ImageUrl,
+                //CategoryName = p.Category.Name
+            });
 
-            return new PageDTO<Product>(products, page, pageSize, totalPorductsCount);
+            return new PageDTO<ProductsDTO>(productsDTO, page, pageSize, totalPorductsCount);
+        }
+        public async Task<ProductsDTO?> GetProductById(int id)
+        {
+            var product = await _repository.GetProductById(id);
+            if (product == null)
+                return null;
+
+            return new ProductsDTO()
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                Description = product.Description,
+                Quantity = product.Quantity,
+                ImageUrl = product.ImageUrl,
+                //CategoryName = product.Category.Name
+            };
+
+
         }
     }
 }
