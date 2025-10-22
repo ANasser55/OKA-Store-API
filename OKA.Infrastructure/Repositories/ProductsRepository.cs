@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
+using OKA.Domain.ValueObjects;
 using OKA.Infrastructure.Data;
 
 
@@ -15,20 +16,23 @@ namespace OKA.Infrastructure.Repositories
             this._context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize)
+        public async Task<IEnumerable<Product>> GetAllProducts(ProductsFilterParams filterParams)
         {
             var query = _context.Products.Include(p => p.Category).AsQueryable();
 
-            if (!string.IsNullOrEmpty(searchTerm) && !string.IsNullOrWhiteSpace(searchTerm))
-                query = query.Where(p => p.Name.Contains(searchTerm));
+            if (!string.IsNullOrEmpty(filterParams.SearchTerm) && !string.IsNullOrWhiteSpace(filterParams.SearchTerm))
+                query = query.Where(p => p.Name.Contains(filterParams.SearchTerm));
+
+            if (filterParams.CategoryId != null)
+                query = query.Where(p => p.CategoryId == filterParams.CategoryId);
 
 
 
-            query = query.Skip((page - 1) * pageSize).Take(pageSize);
+            query = query.Skip((filterParams.Page - 1) * filterParams.PageSize).Take(filterParams.PageSize);
 
-            if (sortBy?.ToLower() == "desc")
+            if (filterParams.SortBy?.ToLower() == "desc")
             {
-                switch (sortColumn?.ToLower())
+                switch (filterParams.SortColumn?.ToLower())
                 {
                     case "price":
                         query = query.OrderByDescending(p => p.Price);
@@ -40,7 +44,7 @@ namespace OKA.Infrastructure.Repositories
             }
             else
             {
-                switch (sortColumn?.ToLower())
+                switch (filterParams.SortColumn?.ToLower())
                 {
                     case "price":
                         query = query.OrderBy(p => p.Price);
@@ -55,15 +59,18 @@ namespace OKA.Infrastructure.Repositories
             return await query.ToListAsync();
 
         }
-        public async Task<int> GetTotalCount(string? searchTerm)
+        public async Task<int> GetTotalCount(string? searchTerm, int? categoryId)
         {
-            if (searchTerm == null)
-                return await _context.Products.CountAsync();
-            return await _context.Products.Where(p => p.Name.Contains(searchTerm)).CountAsync();
+            var query = _context.Products.AsQueryable();
+            if (!string.IsNullOrEmpty(searchTerm) && !string.IsNullOrWhiteSpace(searchTerm))
+                query = query.Where(p => p.Name.Contains(searchTerm));
+            if (categoryId != null)
+                query = query.Where(p => p.CategoryId == categoryId);
+            return await query.CountAsync();
         }
         public async Task<Product?> GetProductById(int id)
         {
-            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Products.Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == id);
         }
 
 

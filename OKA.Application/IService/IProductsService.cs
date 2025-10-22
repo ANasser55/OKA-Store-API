@@ -1,11 +1,11 @@
 ﻿using OKA.Application.DTOs;
-using OKA.Domain.Entities;
+using OKA.Domain.ValueObjects;
 
 namespace OKA.Application.IService
 {
     public interface IProductsService
     {
-        Task<PageDTO<ProductsDTO>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize);
+        Task<PageDTO<ProductsDTO>> GetAllProducts(ProductsFilterParams filterParams);
         Task<ProductsDTO?> GetProductById(int id);
     }
 }

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OKA.Application.IService;
+using OKA.Domain.ValueObjects;
 
 namespace OKA.API.Controllers
 {
@@ -16,9 +16,12 @@ namespace OKA.API.Controllers
         }
 
         [HttpGet()]
-        public async Task<IActionResult> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page = 1, int pageSize = 10)
+        //public async Task<IActionResult> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page = 1, int pageSize = 10)
+        public async Task<IActionResult> GetAllProducts([FromQuery] ProductsFilterParams filterParams)
         {
-            var products = await _service.GetAllProducts(searchTerm, sortColumn, sortBy, page, pageSize);
+            //var products = await _service.GetAllProducts(searchTerm, sortColumn, sortBy, page, pageSize);
+            //var products = await _service.GetAllProducts(filterParams.SearchTerm, filterParams.SortColumn, filterParams.SortBy, filterParams.Page, filterParams.PageSize);
+            var products = await _service.GetAllProducts(filterParams);
 
             return Ok(products);
         }

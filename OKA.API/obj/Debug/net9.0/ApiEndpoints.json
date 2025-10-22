@@ -8,27 +8,32 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "searchTerm",
+        "Name": "SearchTerm",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "sortColumn",
+        "Name": "CategoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "sortBy",
+        "Name": "SortBy",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "page",
+        "Name": "Page",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "pageSize",
+        "Name": "PageSize",
         "Type": "System.Int32",
         "IsRequired": false
       }

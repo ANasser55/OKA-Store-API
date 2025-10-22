@@ -1,6 +1,7 @@
 ﻿using OKA.Application.DTOs;
 using OKA.Application.IService;
 using OKA.Domain.IRepositories;
+using OKA.Domain.ValueObjects;
 
 
 namespace OKA.Application.Services
@@ -14,10 +15,10 @@ namespace OKA.Application.Services
             this._repository = repository;
         }
 
-        public async Task<PageDTO<ProductsDTO>> GetAllProducts(string? searchTerm, string? sortColumn, string? sortBy, int page, int pageSize)
+        public async Task<PageDTO<ProductsDTO>> GetAllProducts(ProductsFilterParams filterParams)
         {
-            var products = await _repository.GetAllProducts(searchTerm, sortColumn, sortBy, page, pageSize);
-            var totalPorductsCount = await _repository.GetTotalCount(searchTerm);
+            var products = await _repository.GetAllProducts(filterParams);
+            var totalPorductsCount = await _repository.GetTotalCount(filterParams.SearchTerm, filterParams.CategoryId);
             var productsDTO = products.Select(p => new ProductsDTO()
             {
                 Id = p.Id,
@@ -26,10 +27,10 @@ namespace OKA.Application.Services
                 Description = p.Description,
                 Quantity = p.Quantity,
                 ImageUrl = p.ImageUrl,
-                //CategoryName = p.Category.Name
+                CategoryName = p.Category?.Name ?? "Uncategorized"
             });
 
-            return new PageDTO<ProductsDTO>(productsDTO, page, pageSize, totalPorductsCount);
+            return new PageDTO<ProductsDTO>(productsDTO, filterParams.Page, filterParams.PageSize, totalPorductsCount);
         }
         public async Task<ProductsDTO?> GetProductById(int id)
         {
@@ -45,7 +46,7 @@ namespace OKA.Application.Services
                 Description = product.Description,
                 Quantity = product.Quantity,
                 ImageUrl = product.ImageUrl,
-                //CategoryName = product.Category.Name
+                CategoryName = product.Category?.Name ?? "Uncategorized"
             };
 
 
