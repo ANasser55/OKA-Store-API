@@ -1,7 +1,6 @@
-﻿
-namespace OKA.Application.DTOs
+﻿namespace OKA.Application.DTOs.Products
 {
-    public class ProductsDTO
+    public class ProductDetailsDTO
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;

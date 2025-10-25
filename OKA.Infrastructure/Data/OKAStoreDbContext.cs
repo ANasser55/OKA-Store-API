@@ -100,7 +100,6 @@ public partial class OKAStoreDbContext : DbContext
         modelBuilder.Entity<Category>(entity =>
         {
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.Name).HasMaxLength(50).HasColumnName("name");
 
             entity.HasKey(e => e.Id).HasName("PK__Categori__3213E83F4C32042C");

@@ -1,5 +1,8 @@
 ﻿using OKA.Application.DTOs;
+using OKA.Application.DTOs.Products;
+using OKA.Application.Enums;
 using OKA.Application.IService;
+using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
 using OKA.Domain.ValueObjects;
 
@@ -15,11 +18,12 @@ namespace OKA.Application.Services
             this._repository = repository;
         }
 
-        public async Task<PageDTO<ProductsDTO>> GetAllProducts(ProductsFilterParams filterParams)
+
+        public async Task<PageDTO<ProductDetailsDTO>> GetAllProducts(ProductsFilterParams filterParams)
         {
             var products = await _repository.GetAllProducts(filterParams);
             var totalPorductsCount = await _repository.GetTotalCount(filterParams.SearchTerm, filterParams.CategoryId);
-            var productsDTO = products.Select(p => new ProductsDTO()
+            var productsDTO = products.Select(p => new ProductDetailsDTO()
             {
                 Id = p.Id,
                 Name = p.Name,
@@ -30,15 +34,15 @@ namespace OKA.Application.Services
                 CategoryName = p.Category?.Name ?? "Uncategorized"
             });
 
-            return new PageDTO<ProductsDTO>(productsDTO, filterParams.Page, filterParams.PageSize, totalPorductsCount);
+            return new PageDTO<ProductDetailsDTO>(productsDTO, filterParams.Page, filterParams.PageSize, totalPorductsCount);
         }
-        public async Task<ProductsDTO?> GetProductById(int id)
+        public async Task<ProductDetailsDTO?> GetProductById(int id)
         {
             var product = await _repository.GetProductById(id);
             if (product == null)
                 return null;
 
-            return new ProductsDTO()
+            return new ProductDetailsDTO()
             {
                 Id = product.Id,
                 Name = product.Name,
@@ -50,6 +54,53 @@ namespace OKA.Application.Services
             };
 
 
+        }
+        public async Task<int> CreateProduct(CreateOrUpdateProductDTO productDTO)
+        {
+            var product = new Product
+            {
+                Name = productDTO.Name,
+                Price = productDTO.Price,
+                Description = productDTO.Description,
+                Quantity = productDTO.Quantity,
+                ImageUrl = productDTO.ImageUrl,
+                CategoryId = productDTO.CategoryId
+            };
+
+            await _repository.CreateProduct(product);
+
+            return product.Id;
+        }
+
+        public async Task<ProductUpdateResult> UpdateProduct(int id, CreateOrUpdateProductDTO productDTO)
+        {
+            var currentProduct = await _repository.GetProductById(id);
+            if (currentProduct == null)
+                return ProductUpdateResult.NotFound;
+
+            currentProduct.Name = productDTO.Name;
+            currentProduct.Description = productDTO.Description;
+            currentProduct.CategoryId = productDTO.CategoryId;
+            currentProduct.Price = productDTO.Price;
+            currentProduct.ImageUrl = productDTO.ImageUrl;
+            currentProduct.Quantity = productDTO.Quantity;
+
+            if (await _repository.UpdateProduct())
+            {
+                return ProductUpdateResult.Success;
+            }
+            else
+                return ProductUpdateResult.Failed;
+
+        }
+
+        public async Task<bool> DeleteProduct(int id)
+        {
+            var product = await _repository.GetProductById(id);
+            if (product == null)
+                return false;
+
+            return await _repository.DeleteProduct(product);
         }
     }
 }

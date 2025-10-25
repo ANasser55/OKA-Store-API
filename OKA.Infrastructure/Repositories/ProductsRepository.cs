@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OKA.Application.DTOs.Products;
 using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
 using OKA.Domain.ValueObjects;
@@ -72,6 +73,34 @@ namespace OKA.Infrastructure.Repositories
         {
             return await _context.Products.Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == id);
         }
+        public async Task<int> CreateProduct(Product product)
+        {
+            await _context.Products.AddAsync(product);
+            //await _context.SaveChangesAsync();
+            return product.Id;
+        }
+
+        public async Task<bool> UpdateProduct()
+        {
+            try
+            {
+                return (await _context.SaveChangesAsync()) > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteProduct(Product product)
+        {
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+
+            return true;
+
+        }
+
 
 
     }

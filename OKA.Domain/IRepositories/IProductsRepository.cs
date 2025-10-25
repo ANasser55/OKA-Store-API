@@ -8,5 +8,8 @@ namespace OKA.Domain.IRepositories
         Task<IEnumerable<Product>> GetAllProducts(ProductsFilterParams filterParams);
         Task<int> GetTotalCount(string? searchTerm, int? categoryId);
         Task<Product?> GetProductById(int id);
+        Task<int> CreateProduct(Product product);
+        Task<bool> UpdateProduct();
+        Task<bool> DeleteProduct(Product product);
     }
 }
