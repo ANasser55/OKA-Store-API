@@ -26,33 +26,27 @@ namespace OKA.API.Controllers
             return Ok(products);
         }
 
-        [HttpGet("details/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
             var product = await _service.GetProductById(id);
+            if (product == null)
+                return NotFound();
             return Ok(product);
         }
 
         [HttpPost()]
         public async Task<IActionResult> CreateProduct([FromBody] CreateOrUpdateProductDTO productDTO)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
 
             var productId = await _service.CreateProduct(productDTO);
 
-            return Ok(productId);
+            return CreatedAtAction(nameof(GetProductById), new { id = productId }, productId);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] CreateOrUpdateProductDTO productDTO)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
 
             var result = await _service.UpdateProduct(id, productDTO);
             if (result == ProductUpdateResult.Failed)
