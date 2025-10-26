@@ -49,9 +49,9 @@ namespace OKA.API.Controllers
         {
 
             var result = await _service.UpdateProduct(id, productDTO);
-            if (result == ProductUpdateResult.Failed)
+            if (result == RequestResult.Failed)
                 return BadRequest();
-            else if (result == ProductUpdateResult.NotFound)
+            else if (result == RequestResult.NotFound)
                 return NotFound();
 
             return NoContent();

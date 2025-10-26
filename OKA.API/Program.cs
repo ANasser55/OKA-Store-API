@@ -19,6 +19,9 @@ builder.Services.AddDbContext<OKAStoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("constr")));
 builder.Services.AddScoped<IProductsService, ProductsService>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
+builder.Services.AddScoped<ICategoriesService, CategoriesService>();
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+
 
 
 var app = builder.Build();

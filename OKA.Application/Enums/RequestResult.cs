@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OKA.Application.Enums
 {
-    public enum ProductUpdateResult
+    public enum RequestResult
     {
         Success,
         NotFound,

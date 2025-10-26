@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OKA.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+750d638608e0f8323981a84c00e9b3538fb86f35")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8f916194e80430b269e867b732d89fd29538e7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("OKA.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OKA.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

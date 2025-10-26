@@ -72,11 +72,11 @@ namespace OKA.Application.Services
             return product.Id;
         }
 
-        public async Task<ProductUpdateResult> UpdateProduct(int id, CreateOrUpdateProductDTO productDTO)
+        public async Task<RequestResult> UpdateProduct(int id, CreateOrUpdateProductDTO productDTO)
         {
             var currentProduct = await _repository.GetProductById(id);
             if (currentProduct == null)
-                return ProductUpdateResult.NotFound;
+                return RequestResult.NotFound;
 
             currentProduct.Name = productDTO.Name;
             currentProduct.Description = productDTO.Description;
@@ -87,10 +87,10 @@ namespace OKA.Application.Services
 
             if (await _repository.UpdateProduct())
             {
-                return ProductUpdateResult.Success;
+                return RequestResult.Success;
             }
             else
-                return ProductUpdateResult.Failed;
+                return RequestResult.Failed;
 
         }
 

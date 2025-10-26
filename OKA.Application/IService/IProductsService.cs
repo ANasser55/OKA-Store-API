@@ -11,7 +11,7 @@ namespace OKA.Application.IService
         Task<PageDTO<ProductDetailsDTO>> GetAllProducts(ProductsFilterParams filterParams);
         Task<ProductDetailsDTO?> GetProductById(int id);
         Task<int> CreateProduct(CreateOrUpdateProductDTO product);
-        Task<ProductUpdateResult> UpdateProduct(int id, CreateOrUpdateProductDTO productDTO);
+        Task<RequestResult> UpdateProduct(int id, CreateOrUpdateProductDTO productDTO);
         Task<bool> DeleteProduct(int id);
     }
 }

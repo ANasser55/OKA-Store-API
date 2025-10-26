@@ -21,15 +21,9 @@ namespace OKA.Infrastructure.Repositories
         {
             var query = _context.Products.Include(p => p.Category).AsQueryable();
 
-            if (!string.IsNullOrEmpty(filterParams.SearchTerm) && !string.IsNullOrWhiteSpace(filterParams.SearchTerm))
-                query = query.Where(p => p.Name.Contains(filterParams.SearchTerm));
-
-            if (filterParams.CategoryId != null)
-                query = query.Where(p => p.CategoryId == filterParams.CategoryId);
+            query = ApplyFilters(query, filterParams.SearchTerm, filterParams.CategoryId);
 
 
-
-            query = query.Skip((filterParams.Page - 1) * filterParams.PageSize).Take(filterParams.PageSize);
 
             if (filterParams.SortBy?.ToLower() == "desc")
             {
@@ -56,6 +50,9 @@ namespace OKA.Infrastructure.Repositories
                 }
             }
 
+            query = query.Skip((filterParams.Page - 1) * filterParams.PageSize).Take(filterParams.PageSize);
+
+
 
             return await query.ToListAsync();
 
@@ -63,10 +60,9 @@ namespace OKA.Infrastructure.Repositories
         public async Task<int> GetTotalCount(string? searchTerm, int? categoryId)
         {
             var query = _context.Products.AsQueryable();
-            if (!string.IsNullOrEmpty(searchTerm) && !string.IsNullOrWhiteSpace(searchTerm))
-                query = query.Where(p => p.Name.Contains(searchTerm));
-            if (categoryId != null)
-                query = query.Where(p => p.CategoryId == categoryId);
+
+            query = ApplyFilters(query, searchTerm, categoryId);
+
             return await query.CountAsync();
         }
         public async Task<Product?> GetProductById(int id)
@@ -76,7 +72,7 @@ namespace OKA.Infrastructure.Repositories
         public async Task<int> CreateProduct(Product product)
         {
             await _context.Products.AddAsync(product);
-            //await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             return product.Id;
         }
 
@@ -101,7 +97,14 @@ namespace OKA.Infrastructure.Repositories
 
         }
 
+        private IQueryable<Product> ApplyFilters(IQueryable<Product> query, string? searchTerm, int? categoryId)
+        {
+            if (!string.IsNullOrEmpty(searchTerm) && !string.IsNullOrWhiteSpace(searchTerm))
+                query = query.Where(p => p.Name.Contains(searchTerm));
+            if (categoryId != null)
+                query = query.Where(p => p.CategoryId == categoryId);
 
-
+            return query;
+        }
     }
 }
