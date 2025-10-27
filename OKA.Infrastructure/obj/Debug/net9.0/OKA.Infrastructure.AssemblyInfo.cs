@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OKA.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8f916194e80430b269e867b732d89fd29538e7f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f05820ba2d626bf89ee9e899bcf687c6d123b6ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("OKA.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OKA.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

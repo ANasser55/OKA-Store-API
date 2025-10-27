@@ -15,7 +15,7 @@ public partial class Order
 
     public string ShippingAddress { get; set; } = null!;
 
-    public DateTime? OrderDate { get; set; }
+    public DateTime OrderDate { get; set; }
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 

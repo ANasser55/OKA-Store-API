@@ -30,7 +30,7 @@ public partial class OKAStoreDbContext : DbContext
             entity.Property(e => e.Email).HasColumnName("email").HasMaxLength(255).IsUnicode(false);
             entity.Property(e => e.FullName).HasMaxLength(255).HasColumnName("full_name");
             entity.Property(e => e.PasswordHash).HasMaxLength(255).HasColumnName("password_hash");
-            entity.Property(e => e.Role).HasColumnName("role");
+            entity.Property(e => e.IsAdmin).HasColumnName("is_admin");
             entity.Property(e => e.Username).HasMaxLength(50).IsUnicode(false).HasColumnName("username");
 
             entity.HasKey(e => e.Id).HasName("PK__Users__3213E83F13BE3B40");

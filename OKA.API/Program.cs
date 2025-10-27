@@ -1,9 +1,11 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using OKA.Application;
 using OKA.Application.IService;
 using OKA.Application.Services;
 using OKA.Domain.IRepositories;
+using OKA.Infrastructure;
 using OKA.Infrastructure.Data;
 using OKA.Infrastructure.Repositories;
 
@@ -21,6 +23,9 @@ builder.Services.AddScoped<IProductsService, ProductsService>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 builder.Services.AddScoped<ICategoriesService, CategoriesService>();
 builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+builder.Services.AddScoped<IOrdersService, OrdersService>();
+builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
 
