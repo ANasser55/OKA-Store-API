@@ -2,11 +2,7 @@
 using OKA.Application.IService;
 using OKA.Domain.Entities;
 using OKA.Domain.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace OKA.Application.Services
 {
@@ -49,7 +45,13 @@ namespace OKA.Application.Services
                     };
                     orderItems.Add(orderItem);
 
-                    product.Quantity -= item.Quantity;
+                    var stockDecreased = await _productsRepository.TryDecreaseQuantity(item.ProductId, item.Quantity);
+
+                    if (!stockDecreased)
+                    {
+                        throw new Exception($"Insufficient stock for product: {product.Name}");
+                    }
+
                     totalAmount += item.Quantity * product.Price;
 
 

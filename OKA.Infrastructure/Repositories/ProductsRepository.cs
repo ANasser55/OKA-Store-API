@@ -106,5 +106,16 @@ namespace OKA.Infrastructure.Repositories
 
             return query;
         }
+
+        public async Task<bool> TryDecreaseQuantity(int productId, int quantity)
+        {
+            var affectedRows = await _context.Database.ExecuteSqlInterpolatedAsync($"""
+                update products 
+                set Quantity = Quantity - {quantity}
+                where id = {productId} and quantity >= {quantity}
+                """);
+
+            return affectedRows > 0;
+        }
     }
 }

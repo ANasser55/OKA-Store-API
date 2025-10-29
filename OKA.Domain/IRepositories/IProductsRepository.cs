@@ -11,5 +11,6 @@ namespace OKA.Domain.IRepositories
         Task<int> CreateProduct(Product product);
         Task<bool> UpdateProduct();
         Task<bool> DeleteProduct(Product product);
+        Task<bool> TryDecreaseQuantity(int productId, int quantity);
     }
 }
